@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29505.145
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleApp", "SampleApp\SampleApp.csproj", "{847AF15A-2735-423A-B3E3-4AC7B4862B03}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LocalizedDataAnnotationsValidator", "LocalizedDataAnnotationsValidator\LocalizedDataAnnotationsValidator.csproj", "{984436AD-220F-4A56-B985-2B770C726268}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "README", "README", "{11807821-F687-4347-8BED-68F0DC2D7780}"
+	ProjectSection(SolutionItems) = preProject
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{847AF15A-2735-423A-B3E3-4AC7B4862B03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{847AF15A-2735-423A-B3E3-4AC7B4862B03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{847AF15A-2735-423A-B3E3-4AC7B4862B03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{847AF15A-2735-423A-B3E3-4AC7B4862B03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{984436AD-220F-4A56-B985-2B770C726268}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{984436AD-220F-4A56-B985-2B770C726268}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{984436AD-220F-4A56-B985-2B770C726268}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{984436AD-220F-4A56-B985-2B770C726268}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D6BFCA44-8414-4FD8-95D8-B571D04634A9}
+	EndGlobalSection
+EndGlobal
