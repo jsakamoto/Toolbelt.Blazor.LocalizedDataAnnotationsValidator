@@ -1,15 +1,52 @@
 ﻿@inherits LayoutComponentBase
+@inject NavigationManager NavigationManager
+@using System.Globalization
 
 <div class="sidebar">
     <NavMenu />
 </div>
 
 <div class="main">
-    <div class="top-row px-4">
-        <a href="https://docs.microsoft.com/en-us/aspnet/" target="_blank">About</a>
-    </div>
 
     <div class="content px-4">
         @Body
+
+        <div class="footer">
+            <div class="form-row align-items-center text-muted px-4">
+                <div class="col">
+                </div>
+                <div class="col-auto">
+                    <span class="oi oi-globe" aria-hidden="true"></span>
+                </div>
+                <div class="col-auto">
+                    <select class="form-control form-control-sm" @onchange="OnChangeCurrentLang">
+                        <option value="en" selected="@(CurrentLang == "en")">English</option>
+                        <option value="ja" selected="@(CurrentLang == "ja")">日本語</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
     </div>
 </div>
+
+@code {
+
+    string CurrentLang;
+
+    protected override void OnInitialized()
+    {
+        CurrentLang = CultureInfo.CurrentUICulture.Name.Split('-').First().ToLower();
+        if (!new[] { "en", "ja" }.Contains(CurrentLang)) { CurrentLang = "en"; }
+    }
+
+    // https://github.com/aspnet/AspNetCore.Docs/issues/13436
+
+    void OnChangeCurrentLang(ChangeEventArgs args)
+    {
+        var culture = (string)args.Value;
+        var uri = NavigationManager.ToAbsoluteUri(NavigationManager.Uri).GetComponents(UriComponents.PathAndQuery, UriFormat.Unescaped);
+        var query = $"?culture={Uri.EscapeDataString(culture)}&redirectUri={Uri.EscapeDataString(uri)}";
+        NavigationManager.NavigateTo("/Culture/SetCulture" + query, forceLoad: true);
+    }
+}

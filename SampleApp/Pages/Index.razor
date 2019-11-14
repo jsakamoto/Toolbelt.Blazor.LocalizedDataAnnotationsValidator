@@ -1,24 +1,19 @@
 ﻿@page "/"
 @inject IStringLocalizer<Index> Localizer
 
-<h1>Hello, world!</h1>
-
-<p>@Localizer["Message"]</p>
-<p>
-    CultureInfo.CurrentUICulture.Name is: [@(System.Globalization.CultureInfo.CurrentUICulture.Name)]
-</p>
-
 <div>
     <EditForm Model="NewPerson" OnValidSubmit="OnSubmit">
         <LocalizedDataAnnotationsValidator />
-        <ValidationSummary />
 
         <p>
+            <label for="name">@Localizer["Name (required, up to 10 characters.)"]</label>
             <InputText id="name" @bind-Value="NewPerson.Name" />
         </p>
-        <div>
+        <p>
             <button class="btn btn-primary">@Localizer["Do Validation"]</button>
-        </div>
+        </p>
+
+        <ValidationSummary />
     </EditForm>
 </div>
 

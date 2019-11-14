@@ -117,10 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Do Validation" xml:space="preserve">
-    <value>Do Validation</value>
+  <data name="Description" xml:space="preserve">
+    <value>サーバー側Blazorアプリで「LocalizedDataAnnotationsValidator」を使用してデータアノテーション検証エラーメッセージをローカライズする方法のデモンストレーション</value>
   </data>
-  <data name="Name (required, up to 10 characters.)" xml:space="preserve">
-    <value>Name (required, up to 10 characters.)</value>
+  <data name="SiteName" xml:space="preserve">
+    <value>"LocalizedDataAnnotationsValidator" - ライブデモ</value>
   </data>
 </root>

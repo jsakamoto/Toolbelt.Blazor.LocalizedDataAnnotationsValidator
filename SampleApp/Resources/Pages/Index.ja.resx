@@ -120,7 +120,7 @@
   <data name="Do Validation" xml:space="preserve">
     <value>検証を実行</value>
   </data>
-  <data name="Message" xml:space="preserve">
-    <value>これはデモンストレーションです。</value>
+  <data name="Name (required, up to 10 characters.)" xml:space="preserve">
+    <value>名前 (入力必須、10文字まで。)</value>
   </data>
 </root>

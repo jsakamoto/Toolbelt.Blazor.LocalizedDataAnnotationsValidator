@@ -24,6 +24,7 @@ namespace SampleApp
 
             services.AddRazorPages();//.AddViewLocalization();
             services.AddServerSideBlazor();
+            services.AddMvc();
 
             services.Configure<RequestLocalizationOptions>(options =>
             {
@@ -57,6 +58,7 @@ namespace SampleApp
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapControllers();
                 endpoints.MapBlazorHub();
                 endpoints.MapFallbackToPage("/_Host");
             });
