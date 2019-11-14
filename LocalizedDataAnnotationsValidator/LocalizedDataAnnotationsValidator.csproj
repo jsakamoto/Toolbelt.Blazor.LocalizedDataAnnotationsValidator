@@ -4,6 +4,24 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace>Toolbelt.Blazor.Forms</RootNamespace>
     <AssemblyName>Toolbelt.Blazor.LocalizedDataAnnotationsValidator</AssemblyName>
+    <NoWarn>$(NoWarn);1591</NoWarn>
+    <GeneratePackageOnBuild Condition=" '$(Configuration)' == 'Release' ">true</GeneratePackageOnBuild>
+    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
+    <PackageOutputPath>..\_dist\</PackageOutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <Version>1.0.0.0</Version>
+    <Authors>J.Sakamoto</Authors>
+    <Copyright>Copyright © 2019 J.Sakamoto, Mozilla Public License 2.0</Copyright>
+    <Description>The Data Annotations Validator Component for Blazor to localize validation error messages, based on "Microsoft.Extensions.Localization".</Description>
+    <PackageTags>blazor,localize,localization,i18n,validation,dataannotations</PackageTags>
+    <PackageLicenseExpression>MPL-2.0</PackageLicenseExpression>
+    <PackageLicenseUrl></PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/jsakamoto/Toolbelt.Blazor.LocalizedDataAnnotationsValidator/</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/jsakamoto/Toolbelt.Blazor.LocalizedDataAnnotationsValidator/</RepositoryUrl>
+    <PackageReleaseNotes>v.1.0.0
+- Initial release.</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>

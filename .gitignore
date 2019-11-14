@@ -2,5 +2,6 @@
 .config/
 bin/
 obj/
+_dist/
 *.suo
 *.user
