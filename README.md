@@ -4,9 +4,9 @@
 
 This is the Data Annotations Validator Component for Blazor to localize the validation error messages, based on `Microsoft.Extensions.Localization`.
 
-_**Live Demo**_ - https://demo-blazor-localized-data-annotations-validator.azurewebsites.net/
+_**Live Demo**_ - [https://demo-blazor-localized-data-annotations-validator.azurewebsites.net/](https://demo-blazor-localized-data-annotations-validator.azurewebsites.net/)
 
-![fig1](.assets/fig1.png)
+![fig1](https://raw.githubusercontent.com/jsakamoto/Toolbelt.Blazor.LocalizedDataAnnotationsValidator/master/.assets/fig1.png)
 
 ### [NOTICE]
 
