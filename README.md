@@ -75,4 +75,4 @@ You can get the source code of Live Demo site from this repository.
 
 ## License
 
-[Mozilla Public License Version 2.0](https://github.com/jsakamoto/Toolbelt.Blazor.LocalizedDataAnnotationsValidator/blob/master/LICENSE)
+[Apache License Version 2.0](https://github.com/jsakamoto/Toolbelt.Blazor.LocalizedDataAnnotationsValidator/blob/master/LICENSE)

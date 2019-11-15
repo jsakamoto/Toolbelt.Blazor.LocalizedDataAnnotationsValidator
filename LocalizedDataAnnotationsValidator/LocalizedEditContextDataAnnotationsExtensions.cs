@@ -1,4 +1,8 @@
-﻿using System;
+﻿// This source code is fork from https://github.com/aspnet/AspNetCore/blob/master/src/Components/Forms/src/EditContextDataAnnotationsExtensions.cs
+// The .NET Foundation licenses the original file of this forked file to you under the Apache License, Version 2.0.
+// See the LICENSE file for the original file of this forked file: https://github.com/aspnet/AspNetCore/blob/master/LICENSE.txt
+
+using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
