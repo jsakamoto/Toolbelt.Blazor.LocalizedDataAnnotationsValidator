@@ -11,9 +11,9 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <Version>1.0.1.0</Version>
+    <Version>1.0.1.1</Version>
     <Authors>J.Sakamoto</Authors>
-    <Copyright>Copyright © 2019 J.Sakamoto, Mozilla Public License 2.0</Copyright>
+    <Copyright>Copyright © 2019 J.Sakamoto,Apache License 2.0</Copyright>
     <Description>The Data Annotations Validator Component for Blazor to localize validation error messages, based on "Microsoft.Extensions.Localization".</Description>
     <PackageTags>blazor,localize,localization,i18n,validation,dataannotations</PackageTags>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
