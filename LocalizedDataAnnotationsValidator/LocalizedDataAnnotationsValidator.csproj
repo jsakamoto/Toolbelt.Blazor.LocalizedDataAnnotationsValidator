@@ -21,6 +21,7 @@
     <PackageProjectUrl>https://github.com/jsakamoto/Toolbelt.Blazor.LocalizedDataAnnotationsValidator/</PackageProjectUrl>
     <RepositoryUrl>https://github.com/jsakamoto/Toolbelt.Blazor.LocalizedDataAnnotationsValidator/</RepositoryUrl>
     <PackageReleaseNotes>v.1.0.1
+- Fix: concurrent access problem
 - Change license from MPL-2.0 to Apache-2.0
 v.1.0.0
 - Initial release.</PackageReleaseNotes>

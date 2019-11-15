@@ -138,20 +138,23 @@ namespace Toolbelt.Blazor.Forms.Internals.Validators
 
         private static ValidationResult GetLocalizedValidationResult(ValidationAttribute attribute, object value, LocalizedValidationContext validationContext)
         {
-            var displayName = validationContext.Context.DisplayName;
-            var errorMessage = attribute.ErrorMessage;
-            try
+            lock (attribute)
             {
-                var localizer = validationContext.Localizer;
-                if (!string.IsNullOrEmpty(displayName)) validationContext.Context.DisplayName = localizer[displayName].Value;
-                if (!string.IsNullOrEmpty(errorMessage)) attribute.ErrorMessage = localizer[errorMessage].Value;
+                var displayName = validationContext.Context.DisplayName;
+                var errorMessage = attribute.ErrorMessage;
+                try
+                {
+                    var localizer = validationContext.Localizer;
+                    if (!string.IsNullOrEmpty(displayName)) validationContext.Context.DisplayName = localizer[displayName].Value;
+                    if (!string.IsNullOrEmpty(errorMessage)) attribute.ErrorMessage = localizer[errorMessage].Value;
 
-                return attribute.GetValidationResult(value, validationContext.Context);
-            }
-            finally
-            {
-                attribute.ErrorMessage = errorMessage;
-                if (!string.IsNullOrEmpty(displayName)) validationContext.Context.DisplayName = displayName;
+                    return attribute.GetValidationResult(value, validationContext.Context);
+                }
+                finally
+                {
+                    attribute.ErrorMessage = errorMessage;
+                    if (!string.IsNullOrEmpty(displayName)) validationContext.Context.DisplayName = displayName;
+                }
             }
         }
 
