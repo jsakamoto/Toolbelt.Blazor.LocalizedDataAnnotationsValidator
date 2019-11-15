@@ -1,4 +1,4 @@
-# Localized Data Annotations Validator Component for Blazor
+# Localized Data Annotations Validator Component for Blazor [![NuGet Package](https://img.shields.io/nuget/v/Toolbelt.Blazor.LocalizedDataAnnotationsValidator.svg)](https://www.nuget.org/packages/Toolbelt.Blazor.LocalizedDataAnnotationsValidator/)
 
 ## Summary
 
