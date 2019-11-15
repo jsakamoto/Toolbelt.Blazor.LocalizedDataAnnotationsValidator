@@ -73,6 +73,13 @@ You can get the source code of Live Demo site from this repository.
 
 - https://github.com/jsakamoto/Toolbelt.Blazor.LocalizedDataAnnotationsValidator/tree/master/SampleApp
 
+## Release Note
+
+- **v.1.0.1**
+  - Fix: concurrent access problem
+  - Change license from MPL-2.0 to Apache-2.0
+- **v.1.0.0.** - Initial release.
+
 ## License
 
 [Apache License Version 2.0](https://github.com/jsakamoto/Toolbelt.Blazor.LocalizedDataAnnotationsValidator/blob/master/LICENSE)
