@@ -26,6 +26,8 @@ See also:
 
 Of course, you should create resource files (.resx) for data annotation validation error messages, too.
 
+![fig.2](https://raw.githubusercontent.com/jsakamoto/Toolbelt.Blazor.LocalizedDataAnnotationsValidator/master/.assets/fig2.png)
+
 ### Step 2. Install this package
 
 Like this:
@@ -71,7 +73,7 @@ That's all!
 
 You can get the source code of Live Demo site from this repository.
 
-- https://github.com/jsakamoto/Toolbelt.Blazor.LocalizedDataAnnotationsValidator/tree/master/SampleApp
+- [https://github.com/jsakamoto/Toolbelt.Blazor.LocalizedDataAnnotationsValidator/tree/master/SampleApp](https://github.com/jsakamoto/Toolbelt.Blazor.LocalizedDataAnnotationsValidator/tree/master/SampleApp)
 
 ## Release Note
 
