@@ -6,6 +6,7 @@ using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 using System.Linq;
 using System.Reflection;
 using Microsoft.AspNetCore.Components.Forms;
@@ -19,20 +20,30 @@ namespace Toolbelt.Blazor.Forms
     {
         private static ConcurrentDictionary<(Type ModelType, string FieldName), PropertyInfo> _propertyInfoCache = new ConcurrentDictionary<(Type, string), PropertyInfo>();
 
-        public static EditContext AddLocalizedDataAnnotationsValidation(this EditContext editContext, IStringLocalizerFactory stringLocalizerFactory)
+        public static EditContext AddLocalizedDataAnnotationsValidation(this EditContext editContext, IStringLocalizerFactory stringLocalizerFactory, string locale = default)
         {
             var localizer = stringLocalizerFactory.Create(editContext.Model.GetType());
             var messages = new ValidationMessageStore(editContext);
             editContext.OnValidationRequested += delegate (object sender, ValidationRequestedEventArgs eventArgs)
             {
+                EnforceLocale(locale);
                 ValidateModel(localizer, (EditContext)sender, messages);
             };
             editContext.OnFieldChanged += delegate (object sender, FieldChangedEventArgs eventArgs)
             {
                 var fieldIdentifier = eventArgs.FieldIdentifier;
+                EnforceLocale(locale);
                 ValidateField(localizer, editContext, messages, in fieldIdentifier);
             };
             return editContext;
+        }
+
+        private static void EnforceLocale(string locale)
+        {
+            if (!string.IsNullOrEmpty(locale) && CultureInfo.CurrentUICulture.Name != locale)
+            {
+                CultureInfo.CurrentUICulture = CultureInfo.GetCultureInfo(locale);
+            }
         }
 
         private static void ValidateModel(IStringLocalizer localizer, EditContext editContext, ValidationMessageStore messages)
