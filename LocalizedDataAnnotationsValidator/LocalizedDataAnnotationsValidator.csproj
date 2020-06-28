@@ -28,7 +28,7 @@ v.1.0.0
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Components" Version="3.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Components" Version="3.1.5" />
     <PackageReference Include="Microsoft.AspNetCore.Components.Forms" Version="3.0.0" />
     <PackageReference Include="Microsoft.Extensions.Localization.Abstractions" Version="3.0.0" />
   </ItemGroup>
